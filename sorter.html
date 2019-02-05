@@ -48,6 +48,39 @@
 
     const converted = converter('hEaAssselo my name is eduardo and im from the bahamas welcome to the surprise eternal moonshine fighting dreamers shinobi ')
     
+
+    const coagulator = (string) => {
+      console.log(string)
+      let newString = []
+      let countString = []
+      let instanceCounter = 1
+      for (let i = 0; i < string.length; i++) {
+        let currentChar = string.charAt(i) 
+        let lastCharPosition = i - 1
+        
+        
+        newString.push(currentChar)
+        
+        if (newString[i] !== newString[lastCharPosition]) {
+          countString.push(instanceCounter)
+          countString.push(newString[i])
+          instanceCounter = 1
+        }
+
+        if (newString[i] === newString[lastCharPosition]) {
+          instanceCounter ++          
+        }
+
+      }
+      countString.shift()
+      console.log(countString.join(""))
+      
+    }
+
+    const coagulated = coagulator('hhhhuuuuhhrrrrrreeeeerrrpppppfffffbbuutttuuusssggggg ')
+    
+    
+
     
   </script>
 </body>
